@@ -1,0 +1,5 @@
+export const DATA_FETCHED = "DATA_FETCHED";
+export const DATA_FETCHING_STARTS = "DATA_FETCHING_STARTS";
+export const ERROR = "ERROR";
+export const UPDATE_SEARCH = "UPDATE_SEARCH";
+export const UPDATE_LANG = "UPDATE_LANG";
