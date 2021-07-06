@@ -60,7 +60,7 @@ const DictionaryContextProvider: React.FC<Props> = ({ children }) => {
 
     try {
       const response = await fetch(
-        `http://localhost:5000?lang=${lang}&search=${search}`
+        `https://simple-dictionary-backend.herokuapp.com?lang=${lang}&search=${search}`
       );
       const data = await response.json();
       if (data.title) {
