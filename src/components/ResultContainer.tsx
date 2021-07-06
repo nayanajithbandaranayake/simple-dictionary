@@ -22,8 +22,8 @@ const ResultContainer = () => {
       <section className="section-center quick-guide">
         <h2>Quick Guide</h2>
         <p>
-          Simple Dictionary is a dictionary you can find definitions for words
-          you don't know or you don't understand.
+          Simple Dictionary is a place where you can find definitions for words
+          that you don't know or you don't understand.
         </p>
         <p>
           You will get the definitions from the very language you choose up top.
@@ -35,7 +35,9 @@ const ResultContainer = () => {
     return (
       <section className="section-center error-container">
         <h3>{error}</h3>
-        <p>Check the spellings and also the language.</p>
+        {error !== "Enter a word to search!" && (
+          <p>Check the spellings and also the language.</p>
+        )}
       </section>
     );
   }
