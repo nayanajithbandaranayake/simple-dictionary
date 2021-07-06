@@ -54,10 +54,11 @@ const DictionaryContextProvider: React.FC<Props> = ({ children }) => {
       dispatch({ type: ERROR, payload: "Enter a word to search!" });
       return;
     }
-
+    console.log(process.env.REACT_APP_BACKEND);
     try {
+      const { REACT_APP_BACKEND } = process.env;
       const response = await fetch(
-        `https://simple-dictionary-backend.herokuapp.com?lang=${lang}&search=${search}`
+        `${REACT_APP_BACKEND}?lang=${lang}&search=${search}`
       );
       const data = await response.json();
       if (data.title) {
