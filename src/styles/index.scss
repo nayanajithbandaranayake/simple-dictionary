@@ -89,7 +89,8 @@ main {
     margin-bottom: 1.5em;
   }
   p {
-    margin-right: 2em;
+    text-align: center;
+    margin: 0 3em;
     color: #969696;
   }
 }
@@ -167,7 +168,7 @@ main {
   }
   p {
     color: #969696;
-    margin-left: 1em;
+    margin: 0 3em;
   }
 }
 
@@ -191,5 +192,10 @@ main {
 @media (min-width: 1500px) {
   body {
     font-size: 20px;
+  }
+}
+@media (max-width: 400px) {
+  body {
+    font-size: 8px;
   }
 }
