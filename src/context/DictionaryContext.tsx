@@ -1,6 +1,5 @@
-import React, { ReactEventHandler } from "react";
-import { useContext } from "react";
-import { useReducer } from "react";
+import React from "react";
+import { useReducer, useContext } from "react";
 import {
   DATA_FETCHED,
   DATA_FETCHING_STARTS,
@@ -39,8 +38,6 @@ type Value = {
 };
 
 const dictionaryContext = React.createContext<Value | null>(null);
-
-const URL = "https://api.dictionaryapi.dev/api/v2/entries/";
 
 const DictionaryContextProvider: React.FC<Props> = ({ children }) => {
   const [state, dispatch] = useReducer(dictionaryReducer, {
